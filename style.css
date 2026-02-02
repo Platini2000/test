@@ -55,7 +55,7 @@ header h2 { margin: 5px 0 0 0; font-weight: 300; color: #a8d8e6; }
 .top-nav {
     position: sticky;
     top: 0;
-    margin-top: 10px; 
+    margin-top: 20px; 
     z-index: 1001;
     border-bottom: 1px solid #333;
 }
