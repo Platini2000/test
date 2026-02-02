@@ -28,7 +28,7 @@ header h2 { margin: 5px 0 0 0; font-weight: 300; color: #a8d8e6; }
 /* --- NAVIGATIE BALKEN (ALGEMEEN) --- */
 .scroll-nav {
     background-color: #0f0f10; /* Diepzwart */
-    height: 60px;              /* Vaste hoogte */
+    height: 80px;              /* Vaste hoogte */
     
     display: flex;
     align-items: center;
