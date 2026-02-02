@@ -22,17 +22,64 @@ const fishData = {
         { id: 'pumpkinseed', name: 'Pumpkinseed' }
     ],
     "Mudwater": [
-        { id: 'largemout', name: 'Largemouth Bass' },
-        { id: 'catfish', name: 'Channel Catfish' },
-        { id: 'bullhead', name: 'Bullhead Catfish' },
-        { id: 'pickerel', name: 'Chain Pickerel' },
-        { id: 'gar', name: 'Florida Gar' },
-        { id: 'bowfin', name: 'bowfin' },
-        { id: 'drum', name: 'Freshwater Drum' },
-        { id: 'crappie', name: 'White Crappie' },
-        { id: 'sunfish', name: 'Sunfish' },
+         { id: 'largemouth', name: 'Largemouth Bass' },
+         { id: 'catfish', name: 'Channel Catfish' },
+         { id: 'bullhead', name: 'Brown Bullhead' },
+         { id: 'pickerel', name: 'Chain Pickerel' },
+         { id: 'gar', name: 'Florida Gar' },
+         { id: 'bowfin', name: 'Bowfin' },
+         { id: 'drum', name: 'Freshwater Drum' },
+         { id: 'crappie', name: 'White Crappie' },
+         { id: 'sunfish', name: 'Bluegill & Sunfish' },
+         { id: 'shiner', name: 'Golden Shiner' }
+    ],
+    "Rocky": [
+        { id: 'rainbow', name: 'Rainbow Trout' },
+        { id: 'cutthroat', name: 'Cutthroat Trout' },
+        { id: 'golden', name: 'Golden Trout' },
+        { id: 'sucker', name: 'White Sucker' },
+        { id: 'whitebass', name: 'White Bass' },
+        { id: 'crappie', name: 'Black Crappie' },
+        { id: 'bluegill', name: 'Bluegill' },
         { id: 'shiner', name: 'Golden Shiner' }
-     ],
+    ],
+    "Neherrin": [
+        { id: 'smallmouth', name: 'Smallmouth Bass' },
+        { id: 'largemouth', name: 'Largemouth Bass' },
+        { id: 'spotted', name: 'Spotted Bass' },
+        { id: 'flathead', name: 'Flathead Catfish' },
+        { id: 'bluecat', name: 'Blue Catfish' },
+        { id: 'channelcat', name: 'Channel Catfish' },
+        { id: 'gar', name: 'Longnose Gar' },
+        { id: 'pickerel', name: 'Chain Pickerel' },
+        { id: 'blackcrappie', name: 'Black Crappie' },
+        { id: 'whitecrappie', name: 'White Crappie' },
+        { id: 'redear', name: 'Redear Sunfish' },
+        { id: 'bluegill', name: 'Bluegill' },
+        { id: 'pumpkinseed', name: 'Pumpkinseed' },
+        { id: 'perch', name: 'Yellow Perch' },
+        { id: 'shad', name: 'American Shad' },
+        { id: 'shiner', name: 'Golden Shiner' }
+    ],
+    "Gent": [
+        { id: 'roach', name: 'Common Roach' },
+        { id: 'bream', name: 'Common Bream' },
+        { id: 'silverbream', name: 'Silver Bream' },
+        { id: 'prussian', name: 'Prussian Carp' },
+        { id: 'ide', name: 'Ide' },
+        { id: 'asp', name: 'Asp' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'zander', name: 'Zander' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'eel', name: 'European Eel' },
+        { id: 'commoncarp', name: 'Common Carp' },
+        { id: 'mirrorcarp', name: 'Mirror Carp' },
+        { id: 'tench', name: 'Tench' },
+        { id: 'wels', name: 'Wels Catfish' },
+        { id: 'flounder', name: 'European Flounder' },
+        { id: 'mullet', name: 'Grey Mullet' },
+        { id: 'goby', name: 'Round Goby' }
+    ]
 };
 
 // --- BEPAAL WELKE LIJST WE MOETEN GEBRUIKEN ---
@@ -47,12 +94,17 @@ if (pageTitle.includes("Lone Star")) {
     currentFishList = fishData["Emerald"];
 } else if (pageTitle.includes("Mudwater")) {
     currentFishList = fishData["Mudwater"];
+} else if (pageTitle.includes("Rocky")) {   
+    currentFishList = fishData["Rocky"];
+} else if (pageTitle.includes("Neherrin")) {
+    currentFishList = fishData["Neherrin"];
+} else if (pageTitle.includes("Gent")) {
+    currentFishList = fishData["Gent"];
 } else {
-    // Fallback: Als we het niet weten, pakken we de eerste of laten we hem leeg
-    console.warn("Geen meer herkend in de titel! Zorg dat de <title> tag 'Lone Star' of 'Emerald' bevat.");
+    // Fallback
+    console.warn("Geen meer herkend in de titel! Zorg dat de <title> tag klopt.");
     currentFishList = [];
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     
@@ -60,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
     setupFishNav();
 
     // 2. Maak BEIDE balken oneindig scrollbaar
-    // (Dit werkt alleen als er genoeg items zijn, anders doet hij niks, wat prima is)
     setupInfiniteScroll("#location-nav");
     setupInfiniteScroll("#fish-nav");
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Platini2000 - Neherrin River Guide</title>
+    <!-- CSS staat EEN map hoger -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -14,7 +15,8 @@
         <h2>Neherrin River (North Carolina) Guide</h2>
     </header>
 
-    <nav>
+    <!-- 1. DE MAP BALK (BOVEN) -->
+    <nav id="location-nav" class="scroll-nav top-nav">
         <a href="../index.html">Lone Star Lake</a>        
         <a href="../Emerald Lake/index.html">Emerald Lake</a>  
         <a href="../Mudwater River/index.html">Mudwater River</a>
@@ -23,118 +25,18 @@
         <a href="../Gent Terneuzen/index.html">Gent Terneuzen</a>
     </nav>
 
+    <!-- 2. DE VIS BALK (ONDER) - Wordt gevuld door Javascript -->
+    <nav id="fish-nav" class="scroll-nav bottom-nav">
+        <!-- Javascript vult dit automatisch -->
+    </nav>
+
     <div class="container">
-
-        <!-- --- HOOFDMENU NEHERRIN RIVER --- -->
-        <div id="fish-menu">
-            <h3 style="text-align: center; padding-left: 0px;">
-                <i class="fa-solid fa-fish" style="color: #4ca1af; margin-right: 15px;"></i> Kies een vissoort:
-            </h3>
-            
-            <div class="menu-list">
-                <!-- 1. Smallmouth Bass -->
-                <button onclick="openFish('smallmouth')">
-                    <img src="smallmouth_bass.jpg" alt="Smallmouth Bass">
-                    <span>Smallmouth Bass</span>
-                </button>
-
-                <!-- 2. Largemouth Bass -->
-                <button onclick="openFish('largemouth')">
-                    <img src="largemouth_bass.jpg" alt="Largemouth Bass">
-                    <span>Largemouth Bass</span>
-                </button>
-
-                <!-- 3. Spotted Bass -->
-                <button onclick="openFish('spotted')">
-                    <img src="spotted_bass.jpg" alt="Spotted Bass">
-                    <span>Spotted Bass</span>
-                </button>
-
-                <!-- 4. Flathead Catfish -->
-                <button onclick="openFish('flathead')">
-                    <img src="flathead_catfish.jpg" alt="Flathead Catfish">
-                    <span>Flathead Catfish</span>
-                </button>
-
-                <!-- 5. Blue Catfish -->
-                <button onclick="openFish('bluecat')">
-                    <img src="blue_catfish.jpg" alt="Blue Catfish">
-                    <span>Blue Catfish</span>
-                </button>
-
-                <!-- 6. Channel Catfish -->
-                <button onclick="openFish('channelcat')">
-                    <img src="channel_catfish.jpg" alt="Channel Catfish">
-                    <span>Channel Catfish</span>
-                </button>
-
-                <!-- 7. Longnose Gar -->
-                <button onclick="openFish('gar')">
-                    <img src="longnose_gar.jpg" alt="Longnose Gar">
-                    <span>Longnose Gar</span>
-                </button>
-
-                <!-- 8. Chain Pickerel -->
-                <button onclick="openFish('pickerel')">
-                    <img src="chain_pickerel.jpg" alt="Chain Pickerel">
-                    <span>Chain Pickerel</span>
-                </button>
-
-                <!-- 9. Black Crappie -->
-                <button onclick="openFish('blackcrappie')">
-                    <img src="black_crappie.jpg" alt="Black Crappie">
-                    <span>Black Crappie</span>
-                </button>
-
-                <!-- 10. White Crappie -->
-                <button onclick="openFish('whitecrappie')">
-                    <img src="white_crappie.jpg" alt="White Crappie">
-                    <span>White Crappie</span>
-                </button>
-
-                <!-- 11. Redear Sunfish -->
-                <button onclick="openFish('redear')">
-                    <img src="redear_sunfish.jpg" alt="Redear Sunfish">
-                    <span>Redear Sunfish</span>
-                </button>
-
-                <!-- 12. Bluegill -->
-                <button onclick="openFish('bluegill')">
-                    <img src="bluegill.jpg" alt="Bluegill">
-                    <span>Bluegill</span>
-                </button>
-
-                <!-- 13. Pumpkinseed -->
-                <button onclick="openFish('pumpkinseed')">
-                    <img src="pumpkinseed.jpg" alt="Pumpkinseed">
-                    <span>Pumpkinseed</span>
-                </button>
-
-                <!-- 14. Yellow Perch -->
-                <button onclick="openFish('perch')">
-                    <img src="yellow_perch.jpg" alt="Yellow Perch">
-                    <span>Yellow Perch</span>
-                </button>
-
-                <!-- 15. American Shad -->
-                <button onclick="openFish('shad')">
-                    <img src="american_shad.jpg" alt="American Shad">
-                    <span>American Shad</span>
-                </button>
-
-                <!-- 16. Golden Shiner -->
-                <button onclick="openFish('shiner')">
-                    <img src="golden_shiner.jpg" alt="Golden Shiner">
-                    <span>Golden Shiner</span>
-                </button>
-            </div>
-        </div>
 
         <!-- --- VIS INFO SCHERMEN --- -->
         <div id="fish-details">
             
             <!-- 1. SMALLMOUTH BASS -->
-            <div id="smallmouth" class="fish-card hidden">
+            <div id="smallmouth" class="fish-card">
                 <div class="top-section">
                     <img src="smallmouth_bass.jpg" alt="Smallmouth Bass" class="fish-img-uniform">
                     <div class="header-info">
@@ -142,7 +44,6 @@
                         <p class="fish-bio">
                             De favoriet van Neherrin. Vecht harder dan zijn neven en houdt van rotsachtige bodems en stroming.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -192,7 +93,7 @@
             </div>
 
             <!-- 2. LARGEMOUTH BASS -->
-            <div id="largemouth" class="fish-card hidden">
+            <div id="largemouth" class="fish-card">
                 <div class="top-section">
                     <img src="largemouth_bass.jpg" alt="Largemouth Bass" class="fish-img-uniform">
                     <div class="header-info">
@@ -200,7 +101,6 @@
                         <p class="fish-bio">
                             De klassieke roofvis. Houdt zich meer op bij begroeiing, leliebladen en omgevallen bomen dan de Smallmouth.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -250,7 +150,7 @@
             </div>
 
             <!-- 3. SPOTTED BASS -->
-            <div id="spotted" class="fish-card hidden">
+            <div id="spotted" class="fish-card">
                 <div class="top-section">
                     <img src="spotted_bass.jpg" alt="Spotted Bass" class="fish-img-uniform">
                     <div class="header-info">
@@ -258,7 +158,6 @@
                         <p class="fish-bio">
                             Lijkt op de Largemouth maar is kleiner en agressiever. Zit vaak iets dieper en gemengd met de Smallmouths.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -307,7 +206,7 @@
             </div>
 
             <!-- 4. FLATHEAD CATFISH -->
-            <div id="flathead" class="fish-card hidden">
+            <div id="flathead" class="fish-card">
                 <div class="top-section">
                     <img src="flathead_catfish.jpg" alt="Flathead Catfish" class="fish-img-uniform">
                     <div class="header-info">
@@ -315,7 +214,6 @@
                         <p class="fish-bio">
                             Het monster van Neherrin. Deze roofmeerval eet levende vissen en wordt enorm groot. Vooral 's nachts actief.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -365,7 +263,7 @@
             </div>
 
             <!-- 5. BLUE CATFISH -->
-            <div id="bluecat" class="fish-card hidden">
+            <div id="bluecat" class="fish-card">
                 <div class="top-section">
                     <img src="blue_catfish.jpg" alt="Blue Catfish" class="fish-img-uniform">
                     <div class="header-info">
@@ -373,7 +271,6 @@
                         <p class="fish-bio">
                             Zwemmen in open water en diepe geulen. Ze houden meer van stinkend aas dan de Flathead.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -421,7 +318,7 @@
             </div>
 
             <!-- 6. CHANNEL CATFISH -->
-            <div id="channelcat" class="fish-card hidden">
+            <div id="channelcat" class="fish-card">
                 <div class="top-section">
                     <img src="channel_catfish.jpg" alt="Channel Catfish" class="fish-img-uniform">
                     <div class="header-info">
@@ -429,7 +326,6 @@
                         <p class="fish-bio">
                             De kleinste van de drie meervallen hier, maar zeer talrijk. Eet vrijwel alles.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -475,7 +371,7 @@
             </div>
 
             <!-- 7. LONGNOSE GAR -->
-            <div id="gar" class="fish-card hidden">
+            <div id="gar" class="fish-card">
                 <div class="top-section">
                     <img src="longnose_gar.jpg" alt="Longnose Gar" class="fish-img-uniform">
                     <div class="header-info">
@@ -483,7 +379,6 @@
                         <p class="fish-bio">
                             Een prehistorisch monster dat net onder het oppervlak zwemt. Heeft een lange bek vol tanden.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -531,7 +426,7 @@
             </div>
 
             <!-- 8. CHAIN PICKEREL -->
-            <div id="pickerel" class="fish-card hidden">
+            <div id="pickerel" class="fish-card">
                 <div class="top-section">
                     <img src="chain_pickerel.jpg" alt="Chain Pickerel" class="fish-img-uniform">
                     <div class="header-info">
@@ -539,7 +434,6 @@
                         <p class="fish-bio">
                             Een agressieve rover die tussen het riet en de lelies jaagt. Valt alles aan wat glimt.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -586,7 +480,7 @@
             </div>
 
             <!-- 9. BLACK CRAPPIE -->
-            <div id="blackcrappie" class="fish-card hidden">
+            <div id="blackcrappie" class="fish-card">
                 <div class="top-section">
                     <img src="black_crappie.jpg" alt="Black Crappie" class="fish-img-uniform">
                     <div class="header-info">
@@ -594,7 +488,6 @@
                         <p class="fish-bio">
                             Donker gevlekte panfish. Houdt van schaduw en structuur (takken in water).
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -640,7 +533,7 @@
             </div>
 
             <!-- 10. WHITE CRAPPIE -->
-            <div id="whitecrappie" class="fish-card hidden">
+            <div id="whitecrappie" class="fish-card">
                 <div class="top-section">
                     <img src="white_crappie.jpg" alt="White Crappie" class="fish-img-uniform">
                     <div class="header-info">
@@ -648,7 +541,6 @@
                         <p class="fish-bio">
                             Lichter van kleur dan de Black Crappie, maar hetzelfde gedrag. Vaak samen te vinden.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -693,7 +585,7 @@
             </div>
 
             <!-- 11. REDEAR SUNFISH -->
-            <div id="redear" class="fish-card hidden">
+            <div id="redear" class="fish-card">
                 <div class="top-section">
                     <img src="redear_sunfish.jpg" alt="Redear Sunfish" class="fish-img-uniform">
                     <div class="header-info">
@@ -701,7 +593,6 @@
                         <p class="fish-bio">
                             Ook wel "Shellcracker" genoemd. Zoekt bodemvoedsel en zit vaak iets dieper dan de Bluegill.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -747,7 +638,7 @@
             </div>
 
             <!-- 12. BLUEGILL -->
-            <div id="bluegill" class="fish-card hidden">
+            <div id="bluegill" class="fish-card">
                 <div class="top-section">
                     <img src="bluegill.jpg" alt="Bluegill" class="fish-img-uniform">
                     <div class="header-info">
@@ -755,7 +646,6 @@
                         <p class="fish-bio">
                             De meest voorkomende vis. Zwemt overal, is brutaal en bijt op alles.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -800,7 +690,7 @@
             </div>
 
             <!-- 13. PUMPKINSEED -->
-            <div id="pumpkinseed" class="fish-card hidden">
+            <div id="pumpkinseed" class="fish-card">
                 <div class="top-section">
                     <img src="pumpkinseed.jpg" alt="Pumpkinseed" class="fish-img-uniform">
                     <div class="header-info">
@@ -808,7 +698,6 @@
                         <p class="fish-bio">
                             Kleurrijke zonnebaars met oranje vlekjes. Vaak iets kleiner dan de Bluegill.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -853,7 +742,7 @@
             </div>
 
             <!-- 14. YELLOW PERCH -->
-            <div id="perch" class="fish-card hidden">
+            <div id="perch" class="fish-card">
                 <div class="top-section">
                     <img src="yellow_perch.jpg" alt="Yellow Perch" class="fish-img-uniform">
                     <div class="header-info">
@@ -861,7 +750,6 @@
                         <p class="fish-bio">
                             Geliefde roofvis met zwarte strepen. Jaagt in scholen.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -907,7 +795,7 @@
             </div>
 
             <!-- 15. AMERICAN SHAD -->
-            <div id="shad" class="fish-card hidden">
+            <div id="shad" class="fish-card">
                 <div class="top-section">
                     <img src="american_shad.jpg" alt="American Shad" class="fish-img-uniform">
                     <div class="header-info">
@@ -915,7 +803,6 @@
                         <p class="fish-bio">
                             Zilveren haringachtige vis. Trekvis die sterk vecht voor zijn formaat.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
@@ -962,7 +849,7 @@
             </div>
 
             <!-- 16. GOLDEN SHINER -->
-            <div id="shiner" class="fish-card hidden">
+            <div id="shiner" class="fish-card">
                 <div class="top-section">
                     <img src="golden_shiner.jpg" alt="Golden Shiner" class="fish-img-uniform">
                     <div class="header-info">
@@ -970,7 +857,6 @@
                         <p class="fish-bio">
                             Klein aasvisje. Nuttig om zelf te vangen als je gratis aas wilt voor de Bass.
                         </p>
-                        <button class="back-btn" onclick="showMenu()">⬅ Terug naar Menu</button>
                     </div>
                 </div>
                 <div class="info-grid">
