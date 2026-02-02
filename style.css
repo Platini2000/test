@@ -253,7 +253,8 @@ footer {
     }
 
     .fish-img-uniform {
-        height: 120px !important; 
+        /* HIER IS DE AANPASSING VOOR GROTERE FOTO */
+        height: 160px !important; 
         margin-bottom: 5px !important;
     }
 
