@@ -1,4 +1,4 @@
-/* --- MOBIEL VEILIG: ADRESBALK BLIJFT ZICHTBAAR --- */
+/* --- MOBIEL VEILIG: GEEN FULLSCREEN TRIGGER --- */
 html, body {
     height: auto;
     overflow-y: auto;
@@ -25,7 +25,7 @@ header {
     text-align: center;
     padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 header h1 {
@@ -41,7 +41,7 @@ header h2 {
     color: #a8d8e6;
 }
 
-/* --- NAVIGATIE BALKEN --- */
+/* --- NAVIGATIE --- */
 .scroll-nav {
     background-color: #0f0f10;
     height: 60px;
@@ -110,7 +110,7 @@ header h2 {
     max-width: 1000px;
     margin: 30px auto;
     padding: 0 20px;
-    min-height: 60svh; /* WAS 60vh → mobiel veilig */
+    min-height: 60vh; /* ONGEWIJZIGD */
 }
 
 /* --- VIS DETAILS --- */
@@ -124,8 +124,20 @@ header h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* (rest is ongewijzigd) */
+/* --- GRID VOOR INFO BLOKKEN (KOLLOMMEN) --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
 
+@media (min-width: 700px) {
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 30px;
@@ -134,3 +146,4 @@ footer {
     margin-bottom: 20px;
     margin-top: -40px;
 }
+
