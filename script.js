@@ -88,6 +88,38 @@ const fishData = {
         { id: 'bluegill', name: 'Bluegill' },
         { id: 'shiner', name: 'Golden Shiner' }
     ],
+    "Sander": [
+        { id: 'bighead', name: 'Bighead Carp' },
+        { id: 'silvercarp', name: 'Silver Carp' },
+        { id: 'commoncarp', name: 'Common Carp' },
+        { id: 'mirrorcarp', name: 'Mirror Carp' },
+        { id: 'leathercarp', name: 'Leather Carp' },
+        { id: 'grasscarp', name: 'Grass Carp' },
+        { id: 'wels', name: 'Wels Catfish' },
+        { id: 'zander', name: 'Zander' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'eel', name: 'European Eel' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'tench', name: 'Tench' },
+        { id: 'bream', name: 'Common Bream' },
+        { id: 'roach', name: 'Common Roach' },
+        { id: 'prussian', name: 'Prussian Carp' },
+        { id: 'ruffe', name: 'Eurasian Ruffe' },
+        { id: 'goby', name: 'Round Goby' }
+    ], 
+    "White Moose": [
+        { id: 'atlanticsalmon', name: 'Atlantic Salmon' },
+        { id: 'laketrout', name: 'Lake Trout' },
+        { id: 'splake', name: 'Splake' },
+        { id: 'brooktrout', name: 'Brook Trout' },
+        { id: 'burbot', name: 'Burbot' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'lakewhitefish', name: 'Lake Whitefish' },
+        { id: 'whitesucker', name: 'White Sucker' },
+        { id: 'perch', name: 'Yellow Perch' },
+        { id: 'pumpkinseed', name: 'Pumpkinseed' },
+        { id: 'lakechub', name: 'Lake Chub' }
+    ],
     "Gent": [
         { id: 'roach', name: 'Common Roach' },
         { id: 'bream', name: 'Common Bream' },
@@ -129,6 +161,10 @@ if (pageTitle.includes("Lone Star")) {
     currentFishList = fishData["Neherrin"];
 } else if (pageTitle.includes("Everglades")) {
     currentFishList = fishData["Everglades"]; 
+} else if (pageTitle.includes("Sander Baggersee")) {
+    currentFishList = fishData["Sander"];
+} else if (pageTitle.includes("White Moose Lake")) {
+    currentFishList = fishData["White Moose"];
 } else if (pageTitle.includes("Gent")) {
     currentFishList = fishData["Gent"];
 } else {
