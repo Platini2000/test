@@ -31,7 +31,7 @@ const fishData = {
          { id: 'drum', name: 'Freshwater Drum' },
          { id: 'crappie', name: 'White Crappie' },
          { id: 'sunfish', name: 'Bluegill & Sunfish' },
-         { id: 'shiner', name: 'Golden Shiner' }
+         { id: 'shiner', name: 'Common Shiner' }
     ],
     "Rocky": [
         { id: 'rainbow', name: 'Rainbow Trout' },
@@ -120,6 +120,252 @@ const fishData = {
         { id: 'pumpkinseed', name: 'Pumpkinseed' },
         { id: 'lakechub', name: 'Lake Chub' }
     ],
+    "Quanchkin": [
+        { id: 'alligatorgar', name: 'Alligator Gar' },
+        { id: 'bluecat', name: 'Blue Catfish' },
+        { id: 'flathead', name: 'Flathead Catfish' },
+        { id: 'channelcat', name: 'Channel Catfish' },
+        { id: 'largemouth', name: 'Largemouth Bass' },
+        { id: 'spotted', name: 'Spotted Bass' },
+        { id: 'bowfin', name: 'Bowfin' },
+        { id: 'drum', name: 'Freshwater Drum' },
+        { id: 'buffalo', name: 'Smallmouth Buffalo' },
+        { id: 'chainpickerel', name: 'Chain Pickerel' },
+        { id: 'blackcrappie', name: 'Black Crappie' },
+        { id: 'whitecrappie', name: 'White Crappie' },
+        { id: 'whitebass', name: 'White Bass' },
+        { id: 'warmouth', name: 'Warmouth' },
+        { id: 'redear', name: 'Redear Sunfish' },
+        { id: 'bluegill', name: 'Bluegill' },
+        { id: 'shiner', name: 'Golden Shiner' }
+    ],
+    "Saint-Croix": [
+        { id: 'muskie', name: 'Muskellunge' },
+        { id: 'tigermuskie', name: 'Tiger Muskie' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'sturgeon', name: 'Lake Sturgeon' },
+        { id: 'bluecat', name: 'Blue Catfish' },
+        { id: 'salmon', name: 'Atlantic Salmon' },
+        { id: 'trout', name: 'Brown & Brook Trout' },
+        { id: 'walleye', name: 'Walleye' },
+        { id: 'smallmouth', name: 'Smallmouth Bass' },
+        { id: 'whitebass', name: 'White Bass' },
+        { id: 'perch', name: 'Yellow Perch' },
+        { id: 'drum', name: 'Drum & Shad' },
+        { id: 'bullhead', name: 'Brown Bullhead' },
+        { id: 'panfish', name: 'Panfish Family' },
+        { id: 'baitfish', name: 'Baitfish' }
+    ],
+    "Blue Crab": [
+        { id: 'tarpon', name: 'Tarpon' },
+        { id: 'permit', name: 'Permit & Bonefish' },
+        { id: 'drum', name: 'Red & Black Drum' },
+        { id: 'snook', name: 'Common Snook' },
+        { id: 'peacock', name: 'Peacock Bass' },
+        { id: 'bass', name: 'Largemouth & Shoal Bass' },
+        { id: 'catfish', name: 'Gafftopsail & Channel' },
+        { id: 'flounder', name: 'Southern Flounder' },
+        { id: 'gar', name: 'Gar & Bowfin' },
+        { id: 'buffalo', name: 'Bigmouth Buffalo' },
+        { id: 'panfish', name: 'Oscar & Panfish' },
+        { id: 'baitfish', name: 'Shad & Shiner' }
+    ],
+    "Kaniq": [
+        { id: 'chinook', name: 'Chinook Salmon' },
+        { id: 'coho', name: 'Coho Salmon' },
+        { id: 'sockeye', name: 'Sockeye Salmon' },
+        { id: 'chum', name: 'Chum Salmon' },
+        { id: 'pink', name: 'Pink Salmon' },
+        { id: 'bull', name: 'Bull Trout & Dolly Varden' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'sucker', name: 'Longnose Sucker' },
+        { id: 'blackfish', name: 'Alaska Blackfish' }
+    ],
+    "Peru": [
+        { id: 'arapaima', name: 'Arapaima' },
+        { id: 'catfish', name: 'Amazon Catfish' },
+        { id: 'payara', name: 'Payara & Biara' },
+        { id: 'arowana', name: 'Silver Arowana' },
+        { id: 'peacock', name: 'Peacock Bass' },
+        { id: 'piranha', name: 'Piranhas' },
+        { id: 'barracuda', name: 'Red Tail Barracuda' },
+        { id: 'panfish', name: 'Oscar, Jacunda & Croaker' },
+        { id: 'school', name: 'Brycon, Aracu & Prochilodus' }
+    ],
+    "Bolivia": [
+        { id: 'redtail', name: 'Redtail & Gilded' },
+        { id: 'sorubim', name: 'Sorubim & Ripsaw' },
+        { id: 'payara', name: 'Payara & Biara' },
+        { id: 'peacock', name: 'Peacock Bass' },
+        { id: 'tambaqui', name: 'Tambaqui' },
+        { id: 'apapa', name: 'Apapa & Brycon' },
+        { id: 'barracuda', name: 'Red Tail Barracuda' },
+        { id: 'piranha', name: 'Piranhas' },
+        { id: 'panfish', name: 'Oscar & Panfish' },
+        { id: 'aracu', name: 'Spotted Aracu' }
+    ],
+    "Amazonian": [
+        { id: 'monsters', name: 'Arapaima & Piraiba' },
+        { id: 'shark', name: 'Bull Shark' },
+        { id: 'eel', name: 'Electric Eel' },
+        { id: 'peacock', name: 'Peacock Bass' },
+        { id: 'catfish', name: 'Amazon Catfish' },
+        { id: 'vampire', name: 'Vampire Fish' },
+        { id: 'trahira', name: 'Trahira & Barracuda' },
+        { id: 'piranha', name: 'Piranhas' },
+        { id: 'surface', name: 'Apapa & Arowana' },
+        { id: 'panfish', name: 'Amazon Panfish' },
+        { id: 'school', name: 'Aracu & Prochilodus' }
+    ],
+    "Congo": [
+        { id: 'goliath', name: 'Goliath Tigerfish' },
+        { id: 'nileperch', name: 'Nile Perch' },
+        { id: 'tigerfish', name: 'African Tigerfish' },
+        { id: 'vundu', name: 'Vundu & Kamba' },
+        { id: 'sharptooth', name: 'Medium Catfish' },
+        { id: 'cornish', name: 'Cornish Jack & Pike' },
+        { id: 'labeo', name: 'Labeo & Elephant' },
+        { id: 'tilapia', name: 'Tilapia & Bulldog' }
+    ],
+    "Kaiji": [
+        { id: 'tuna', name: 'Bluefin, Yellowfin & Bigeye' },
+        { id: 'marlin', name: 'Striped Marlin' },
+        { id: 'grouper', name: 'Giant Grouper' },
+        { id: 'mahi', name: 'Mahi-Mahi' },
+        { id: 'trevally', name: 'Giant Trevally' },
+        { id: 'squid', name: 'Bigfin Reef Squid' },
+        { id: 'snapper', name: 'Ruby Snapper & Jobfish' },
+        { id: 'amberjack', name: 'Amberjacks' },
+        { id: 'mackerel', name: 'Mackerel & Bonito' },
+        { id: 'bait', name: 'Anchovy & Jack Mackerel' }
+    ],
+    "Maldives": [
+        { id: 'billfish', name: 'Marlins & Sailfish' },
+        { id: 'swordfish', name: 'Swordfish' },
+        { id: 'tuna', name: 'Big Tunas' },
+        { id: 'tuna_small', name: 'Small Tunas' },
+        { id: 'wahoo', name: 'Wahoo & Mackerel' },
+        { id: 'gt', name: 'GT & Amberjack' },
+        { id: 'grouper', name: 'Grouper & Sweetlips' },
+        { id: 'snapper', name: 'Snappers & Jobfish' },
+        { id: 'shark', name: 'Shark & Barracuda' },
+        { id: 'mahi', name: 'Mahi-Mahi' },
+        { id: 'reef', name: 'Reef Beauties' },
+        { id: 'bait', name: 'Scad & Flyingfish' }
+    ],
+    "Skarland": [
+        { id: 'greenland', name: 'Greenland Shark' },
+        { id: 'halibut', name: 'Atlantic Halibut' },
+        { id: 'cod', name: 'Atlantic Cod' },
+        { id: 'coalfish', name: 'Coalfish (Saithe)' },
+        { id: 'salmon', name: 'Salmon & Trout' },
+        { id: 'sturgeon', name: 'European Sea Sturgeon' },
+        { id: 'wolffish', name: 'Atlantic Wolffish' },
+        { id: 'angler', name: 'European Angler' },
+        { id: 'ling', name: 'Ling & Cusk' },
+        { id: 'porbeagle', name: 'Porbeagle & Dogfish' },
+        { id: 'redfish', name: 'Redfish & Meagre' },
+        { id: 'haddock', name: 'Haddock & Whiting' },
+        { id: 'mackerel', name: 'Mackerel Family' },
+        { id: 'brill', name: 'Flatfish' }
+    ],
+    "Tiber": [
+        { id: 'wels', name: 'Wels Catfish' },
+        { id: 'marble', name: 'Marble Trout' },
+        { id: 'barbel', name: 'Common Barbel' },
+        { id: 'asp', name: 'Asp' },
+        { id: 'browntrout', name: 'Brown Trout' },
+        { id: 'grayling', name: 'European Grayling' },
+        { id: 'chub', name: 'Chub' },
+        { id: 'carp', name: 'Common Carp' },
+        { id: 'eel', name: 'European Eel' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'coarse', name: 'Roach, Crucian & Bitterling' }
+    ],
+    "San Joaquin": [
+        { id: 'sturgeon', name: 'White Sturgeon' },
+        { id: 'chinook', name: 'Chinook Salmon' },
+        { id: 'striped', name: 'Striped Bass' },
+        { id: 'steelhead', name: 'Steelhead' },
+        { id: 'carp', name: 'Common Carp' },
+        { id: 'largemouth', name: 'Largemouth Bass' },
+        { id: 'smallmouth', name: 'Smallmouth & Spotted' },
+        { id: 'channel', name: 'Channel Catfish' },
+        { id: 'whitecat', name: 'White Catfish' },
+        { id: 'bluegill', name: 'Bluegill' },
+        { id: 'redear', name: 'Redear Sunfish' },
+        { id: 'crappie', name: 'Crappie' },
+        { id: 'splake', name: 'Splake' },
+        { id: 'sucker', name: 'Sacramento Sucker' }
+    ],
+    "Creuse": [
+        { id: 'wels', name: 'Wels Catfish' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'zander', name: 'Zander' },
+        { id: 'carp', name: 'Common Carp' },
+        { id: 'barbel', name: 'Common Barbel' },
+        { id: 'bream', name: 'Common Bream' },
+        { id: 'tench', name: 'Tench' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'nase', name: 'Common Nase' },
+        { id: 'roach', name: 'Roach & Rudd' },
+        { id: 'crucian', name: 'Crucian Carp' }
+    ],
+    "Dnipro": [
+        { id: 'beluga', name: 'Beluga (Sturgeon)' },
+        { id: 'wels', name: 'Wels Catfish' },
+        { id: 'silvercarp', name: 'Bighead & Silver Carp' },
+        { id: 'carp', name: 'Common Carp' },
+        { id: 'mirrorcarp', name: 'Mirror Carp' },
+        { id: 'grasscarp', name: 'Grass Carp' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'zander', name: 'Zander' },
+        { id: 'asp', name: 'Asp' },
+        { id: 'bream', name: 'Common Bream' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'prussian', name: 'Prussian Carp' },
+        { id: 'roach', name: 'Roach, Rudd & Nase' },
+        { id: 'smallbottom', name: 'Small Bottom Feeders' },
+        { id: 'crayfish', name: 'European Crayfish' }
+    ],
+    "Selenge": [
+        { id: 'taimen', name: 'Siberian Taimen' },
+        { id: 'lenok', name: 'Lenok' },
+        { id: 'grayling', name: 'Arctic Grayling' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'burbot', name: 'Burbot' },
+        { id: 'whitefish', name: 'Omul & Whitefish' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'ide', name: 'Ide' },
+        { id: 'roach', name: 'Roach & Dace' },
+        { id: 'bait', name: 'Bitterling & Minnow' }
+    ],
+    "Willow": [
+        { id: 'common', name: 'Common Carp' },
+        { id: 'mirror', name: 'Mirror Carp' },
+        { id: 'leather', name: 'Leather Carp' },
+        { id: 'grass', name: 'Grass Carp' },
+        { id: 'ghost', name: 'Ghost Carp' },
+        { id: 'hybrid', name: 'Hybrid F1 Carp' },
+        { id: 'wels', name: 'Wels Catfish' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'tench', name: 'Tench & Golden' },
+        { id: 'bream', name: 'Common Bream' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'chub', name: 'Chub' },
+        { id: 'crucian', name: 'Crucian & Prussian' }
+    ],
+    "Lesni": [
+        { id: 'common', name: 'Common Carp' },
+        { id: 'mirror', name: 'Mirror Carp' },
+        { id: 'tench', name: 'Tench' },
+        { id: 'pike', name: 'Northern Pike' },
+        { id: 'perch', name: 'European Perch' },
+        { id: 'prussian', name: 'Prussian Carp' },
+        { id: 'roach', name: 'Common Roach' },
+        { id: 'bream', name: 'Silver Bream' },
+        { id: 'weather', name: 'European Weatherfish' }
+    ],
     "Gent": [
         { id: 'roach', name: 'Common Roach' },
         { id: 'bream', name: 'Common Bream' },
@@ -140,6 +386,11 @@ const fishData = {
         { id: 'goby', name: 'Round Goby' }
     ]
 };
+
+// --- VARIABELEN VOOR ATTRACT MODE ---
+let attractTimer;
+const IDLE_TIME = 45000; // 45 seconden wachten bij inactiviteit
+const SLIDE_TIME = 15000; // 15 seconden tonen voordat we wisselen
 
 // --- BEPAAL WELKE LIJST WE MOETEN GEBRUIKEN ---
 let currentFishList = [];
@@ -165,6 +416,42 @@ if (pageTitle.includes("Lone Star")) {
     currentFishList = fishData["Sander"];
 } else if (pageTitle.includes("White Moose Lake")) {
     currentFishList = fishData["White Moose"];
+} else if (pageTitle.includes("Quanchkin Lake")) {
+    currentFishList = fishData["Quanchkin"];
+} else if (pageTitle.includes("Saint-Croix")) {   
+    currentFishList = fishData["Saint-Croix"];
+} else if (pageTitle.includes("Blue Crab")) {   
+    currentFishList = fishData["Blue Crab"];
+} else if (pageTitle.includes("Kaniq")) {   
+    currentFishList = fishData["Kaniq"];
+} else if (pageTitle.includes("Peru")) {   
+    currentFishList = fishData["Peru"];
+} else if (pageTitle.includes("Bolivia")) {   
+    currentFishList = fishData["Bolivia"];
+} else if (pageTitle.includes("Amazonian")) {   
+    currentFishList = fishData["Amazonian"];
+} else if (pageTitle.includes("Congo")) {   
+    currentFishList = fishData["Congo"];
+} else if (pageTitle.includes("Kaiji")) {   
+    currentFishList = fishData["Kaiji"];
+} else if (pageTitle.includes("Maldives")) {   
+    currentFishList = fishData["Maldives"];
+} else if (pageTitle.includes("Skarland")) {   
+    currentFishList = fishData["Skarland"];
+} else if (pageTitle.includes("Tiber")) {   
+    currentFishList = fishData["Tiber"];
+} else if (pageTitle.includes("San Joaquin")) {   
+    currentFishList = fishData["San Joaquin"];
+} else if (pageTitle.includes("Creuse")) {   
+    currentFishList = fishData["Creuse"];
+} else if (pageTitle.includes("Dnipro")) {   
+    currentFishList = fishData["Dnipro"];
+} else if (pageTitle.includes("Selenge")) {   
+    currentFishList = fishData["Selenge"];
+} else if (pageTitle.includes("Weeping Willow")) {   
+    currentFishList = fishData["Willow"];
+} else if (pageTitle.includes("Lesni")) {   
+    currentFishList = fishData["Lesni"];
 } else if (pageTitle.includes("Gent")) {
     currentFishList = fishData["Gent"];
 } else {
@@ -182,12 +469,18 @@ document.addEventListener("DOMContentLoaded", function() {
     setupInfiniteScroll("#location-nav");
     setupInfiniteScroll("#fish-nav");
 
-    // 3. Selecteer standaard de EERSTE vis van de huidige lijst
-    setTimeout(() => {
-        if (currentFishList.length > 0) {
-            selectFish(currentFishList[0].id);
-        }
-    }, 100);
+    // 3. START ATTRACT MODE LOGICA
+    startAttractModeLogic();
+
+    // 4. Als we NIET in attract mode zijn, selecteer de eerste vis
+    // (Als we WEL in attract mode zijn, kiest de logica al een random vis)
+    if (sessionStorage.getItem('attractMode') !== 'on') {
+        setTimeout(() => {
+            if (currentFishList.length > 0) {
+                selectFish(currentFishList[0].id);
+            }
+        }, 100);
+    }
 });
 
 
@@ -196,19 +489,18 @@ function setupFishNav() {
     const nav = document.getElementById('fish-nav');
     if(!nav) return;
 
-    // Maak de balk eerst leeg voor de zekerheid
     nav.innerHTML = '';
 
-    // We maken de HTML linkjes aan op basis van currentFishList
     currentFishList.forEach(fish => {
         const link = document.createElement('a');
-        link.href = "#"; // Geen reload
-        link.dataset.id = fish.id; // Data attribuut om later te vinden
+        link.href = "#"; 
+        link.dataset.id = fish.id; 
         link.textContent = fish.name;
         
-        // Klik event: vis selecteren
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            // Als de gebruiker klikt, stoppen we de attract mode
+            resetInactivityTimer();
             selectFish(fish.id);
         });
 
@@ -218,13 +510,10 @@ function setupFishNav() {
 
 /* --- FUNCTIE: VIS SELECTEREN & CENTREREN --- */
 function selectFish(fishId) {
-    // A. TOON DE KAART
-    // Eerst alles verbergen
     document.querySelectorAll('.fish-card').forEach(card => {
         card.style.display = 'none';
     });
     
-    // Specifieke kaart tonen
     const targetCard = document.getElementById(fishId);
     if(targetCard) {
         targetCard.style.display = 'block';
@@ -232,24 +521,15 @@ function selectFish(fishId) {
         console.warn("Kan vis-kaart niet vinden met ID:", fishId);
     }
 
-    // B. UPDATE DE BALK (Visueel)
     const nav = document.getElementById('fish-nav');
-    // Let op: door infinite scroll hebben we nu clones. We moeten ALLE links checken.
     const allLinks = Array.from(nav.querySelectorAll('a'));
 
-    // Verwijder active class overal
     allLinks.forEach(link => link.classList.remove('active'));
 
-    // Zoek de index van de vis in de originele lijst
     const originalIndex = currentFishList.findIndex(f => f.id === fishId);
-    
     if (originalIndex === -1) return;
 
-    // Omdat we oneindig scrollen (3 sets), pakken we de link in de MIDDELSTE set.
-    // Set 1 = length items, Set 2 begint daarna.
     const totalItems = currentFishList.length; 
-    
-    // Als er oneindige scroll is toegepast (dus meer links in DOM dan in lijst)
     let targetLinkIndex = originalIndex;
     
     if (allLinks.length > totalItems) {
@@ -261,8 +541,6 @@ function selectFish(fishId) {
     if (targetLink) {
         targetLink.classList.add('active');
         
-        // C. CENTREREN
-        // Bereken positie om te scrollen zodat het item in het midden staat
         const navWidth = nav.clientWidth;
         const itemLeft = targetLink.offsetLeft;
         const itemWidth = targetLink.clientWidth;
@@ -282,25 +560,25 @@ function setupInfiniteScroll(selector) {
     const nav = document.querySelector(selector);
     if (!nav) return;
 
-    // Kopieer de items (Original)
     const originalLinks = Array.from(nav.children);
-    
-    // Als er heel weinig items zijn (minder dan schermbreedte), is scrollen niet nodig/leuk
     if (originalLinks.length === 0) return;
 
-    // Maak de nav leeg en vul opnieuw: [Set 1] [Set 2] [Set 3]
     nav.innerHTML = '';
 
     const appendItems = (items) => {
         items.forEach(link => {
             let clone = link.cloneNode(true);
             
-            // Als het de vis-nav is, moeten we de click event opnieuw koppelen aan de clone
-            // (CloneNode kopieert standaard geen event listeners)
             if (selector === '#fish-nav') {
                 clone.addEventListener('click', (e) => {
                     e.preventDefault();
+                    resetInactivityTimer();
                     selectFish(clone.dataset.id);
+                });
+            } else {
+                // Locatie balk links ook klikbaar laten resetten
+                clone.addEventListener('click', () => {
+                   sessionStorage.setItem('attractMode', 'off');
                 });
             }
             
@@ -308,22 +586,19 @@ function setupInfiniteScroll(selector) {
         });
     };
 
-    appendItems(originalLinks); // Buffer Links (Links)
-    appendItems(originalLinks); // Hoofd Set (Midden)
-    appendItems(originalLinks); // Buffer Links (Rechts)
+    appendItems(originalLinks); 
+    appendItems(originalLinks); 
+    appendItems(originalLinks); 
 
-    // Scroll logica
     setTimeout(() => {
         const singleSetWidth = nav.scrollWidth / 3;
         
-        // Voor de locatiebalk: zoek de actieve map en scroll daar naartoe
         if (selector === '#location-nav') {
             const activeLink = originalLinks.find(l => l.classList.contains('active'));
             if (activeLink) {
                 const index = originalLinks.indexOf(activeLink);
-                // Omdat we opnieuw hebben opgebouwd, moeten we de nieuwe elementen pakken
                 const currentLinks = nav.querySelectorAll('a');
-                const target = currentLinks[originalLinks.length + index]; // Middelste set
+                const target = currentLinks[originalLinks.length + index]; 
                 
                 if(target) {
                     const scrollPos = target.offsetLeft - (nav.clientWidth / 2) + (target.clientWidth / 2);
@@ -333,18 +608,93 @@ function setupInfiniteScroll(selector) {
                 nav.scrollLeft = singleSetWidth;
             }
         } else {
-             // Voor vissenbalk zetten we de basis scroll op het midden.
-             // selectFish() corrigeert dit later nog naar de actieve vis.
              nav.scrollLeft = singleSetWidth;
         }
 
-        // Het oneindige loop event
         nav.addEventListener('scroll', function() {
             if (nav.scrollLeft >= singleSetWidth * 2) {
-                nav.scrollLeft -= singleSetWidth; // Spring terug naar set 2
-            } else if (nav.scrollLeft <= 5) { // Iets marge voor mobiel bouncen
-                nav.scrollLeft += singleSetWidth; // Spring vooruit naar set 2
+                nav.scrollLeft -= singleSetWidth; 
+            } else if (nav.scrollLeft <= 5) { 
+                nav.scrollLeft += singleSetWidth; 
             }
         });
     }, 50);
+}
+
+
+/* --------------------------------------------------------------------------
+   NIEUW: AUTOMATISCHE ATTRACT MODE LOGICA
+-------------------------------------------------------------------------- */
+
+function startAttractModeLogic() {
+    // 1. Luisteraars toevoegen om activiteit te detecteren (reset timer)
+    const events = ['mousemove', 'mousedown', 'touchstart', 'scroll', 'keydown'];
+    events.forEach(evt => document.addEventListener(evt, resetInactivityTimer));
+
+    // 2. Check bij laden: Was de automatische show al bezig?
+    const status = sessionStorage.getItem('attractMode');
+
+    if (status === 'on') {
+        // JA: We zitten midden in de show op een nieuwe pagina.
+        
+        // Kies direct een willekeurige vis om te tonen
+        pickRandomFish();
+        
+        // Wacht 10 seconden en ga dan naar de volgende locatie
+        attractTimer = setTimeout(triggerNextSlide, SLIDE_TIME);
+        
+    } else {
+        // NEE: Normale gebruiker. Wacht 30 seconden inactiviteit.
+        attractTimer = setTimeout(triggerNextSlide, IDLE_TIME);
+    }
+}
+
+// Reset timer bij gebruikersactie
+function resetInactivityTimer() {
+    // Zet vlag uit
+    sessionStorage.setItem('attractMode', 'off');
+    
+    // Stop lopende timers
+    clearTimeout(attractTimer);
+    
+    // Start nieuwe timer van 30 seconden
+    attractTimer = setTimeout(triggerNextSlide, IDLE_TIME);
+}
+
+// Kies een willekeurige vis uit de huidige lijst
+function pickRandomFish() {
+    if (currentFishList.length > 0) {
+        const randomIndex = Math.floor(Math.random() * currentFishList.length);
+        const randomFish = currentFishList[randomIndex];
+        // Selecteer vis (selectFish functie regelt de UI)
+        setTimeout(() => selectFish(randomFish.id), 200);
+    }
+}
+
+// Trigger de volgende stap (Nieuwe Locatie)
+function triggerNextSlide() {
+    // Zet vlag aan voor de volgende pagina
+    sessionStorage.setItem('attractMode', 'on');
+    
+    // Kies willekeurige vis op huidige pagina (voor het geval de pagina niet herlaadt)
+    pickRandomFish();
+
+    // Kies willekeurige locatie uit de bovenbalk
+    const locationNav = document.getElementById('location-nav');
+    if (locationNav) {
+        // We pakken alle links (ook de clones)
+        const links = locationNav.querySelectorAll('a');
+        if (links.length > 0) {
+            const randomLinkIndex = Math.floor(Math.random() * links.length);
+            const targetLink = links[randomLinkIndex];
+            
+            // Simuleer een klik of navigeer
+            // We navigeren na een kleine vertraging zodat de vis even zichtbaar is als de pagina niet herlaadt
+            // Maar omdat locaties meestal nieuwe pagina's zijn, gebeurt dit direct.
+            window.location.href = targetLink.href;
+        }
+    }
+    
+    // Timer opnieuw zetten voor de zekerheid (als pagina niet herlaadt)
+    attractTimer = setTimeout(triggerNextSlide, SLIDE_TIME);
 }
