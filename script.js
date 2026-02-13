@@ -349,6 +349,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (sessionStorage.getItem('attractMode') !== 'on' && currentFishList.length > 0) {
         setTimeout(() => selectFish(currentFishList[0].id), 200);
     }
+
+
 });
 
 // ==========================================
@@ -381,7 +383,10 @@ function injectMapButtons() {
                 <span class="map-source">FP-COLLECTIVE: ${lakeKey.toUpperCase()}</span>
                 <button class="close-map-btn" onclick="closeMap(this)">Sluiten <i class="fa-solid fa-xmark"></i></button>
             </div>
-            <iframe src="" class="map-iframe"></iframe>
+            <div style="position: relative; flex-grow: 1; display: flex;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 62, 80, 0.5); pointer-events: none; z-index: 5; mix-blend-mode: multiply;"></div>
+                <iframe src="" class="map-iframe" style="flex-grow: 1; border: none;"></iframe>
+            </div>
         `;
         grid.appendChild(wrapper);
     });
